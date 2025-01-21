@@ -1,0 +1,48 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #1db954, #191414);
+  color: white;
+  text-align: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  padding: 50px;
+}
+
+button {
+  background: #1db954;
+  border: none;
+  padding: 15px 30px;
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s ease;
+  margin: 20px;
+}
+
+button:hover {
+  background: #191414;
+}
+
+.playlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.playlist-card {
+  background: #282828;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: left;
+}
+
+.playlist-card img {
+  width: 100%;
+  border-radius: 10px;
+}
