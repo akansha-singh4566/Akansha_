@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CountryApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Country Info App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body ng-controller="CountryController">
+
+  <div class="container">
+    <h1>Country Info App</h1>
+    <label for="country">Select a Country:</label>
+    <input
+      type="text"
+      id="country"
+      ng-model="countryQuery"
+      placeholder="Enter country name"
+      ng-keyup="fetchData(countryQuery)"
+    />
+
+    <div class="country-info" ng-if="country">
+      <h2>{{ country.name.common }}</h2>
+      <img ng-src="{{ country.flags.svg }}" alt="Flag of {{ country.name.common }}" />
+      <p><strong>Population:</strong> {{ country.population | number }}</p>
+      <p><strong>Region:</strong> {{ country.region }}</p>
+      <p><strong>Subregion:</strong> {{ country.subregion }}</p>
+      <p><strong>Currency:</strong> {{ currency }}</p>
+    </div>
+
+    <p class="error" ng-if="error">{{ error }}</p>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
