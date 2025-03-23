@@ -5,62 +5,88 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #DADADA; /* Light Gray */
+    background-color: #1d3849; /* Dark blue */
 }
 
 .calculator {
-    width: 300px;
-    background: #FFFFFF; /* White */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(218, 211, 211, 0.1);
-    overflow: hidden;
+    width: 320px;
+    background: #142f44; /* Deep navy blue */
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    padding: 20px;
 }
 
 #display {
-    width: 100%;
+    width: 90%;
     height: 60px;
     border: none;
-    background: #faf8f8; /* Medium Gray */
-    text-align: right;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    text-align: center;  /* Center align text */
     padding: 10px;
-    font-size: 1.5em;
-    color: #FF9600; /* Orange */
+    font-size: 2em;
+    color: #fff;
+    box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+    margin: 10px auto;  /* Centering */
+    display: block;  /* Ensures centering works */
 }
+
 
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 button {
     height: 60px;
-    font-size: 1.2em;
+    font-size: 1.5em;
     border: none;
-    background: #505050; /* Medium Gray */
-    color: #FFFFFF; /* White */
+    background: #205b7a; /* Dark teal blue */
+    color: #ffffff;
     cursor: pointer;
-    transition: background 0.2s;
+    border-radius: 8px;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-    background: #707070; /* Slightly Lighter Gray */
+    background: #1d3849; /* Slightly darker blue */
 }
 
-button:nth-child(1) {
-    background: #FF9600; /* Orange */
-    color: #000000; /* Black */
+button:active {
+    background: #142f44; /* Darker navy */
+}
+
+/* Special buttons */
+button:nth-child(1) { /* Clear Button */
+    background: #323888; /* Red */
 }
 
 button:nth-child(1):hover {
-    background: #FFA733; /* Lighter Orange */
+    background: #323888;
 }
 
-button:nth-child(17) {
-    background: #1C1C1C; /* Dark Gray */
-    color: #FFFFFF; /* White */
+button:nth-child(17) { /* Equal Button */
+    background: #323888; /* Green */
 }
 
 button:nth-child(17):hover {
-    background: #383838; /* Slightly Lighter Dark Gray */
+    background: #323888;
+}
+
+button:nth-child(5), /* Division */
+button:nth-child(9), /* Multiplication */
+button:nth-child(13), /* Subtraction */
+button:nth-child(16) { /* Addition */
+    background: #323888; /* Orange */
+    color: #000000;
+}
+
+button:nth-child(5):hover,
+button:nth-child(9):hover,
+button:nth-child(13):hover,
+button:nth-child(16):hover {
+    background: #323888;
 }
